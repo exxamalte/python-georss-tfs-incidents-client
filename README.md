@@ -1,9 +1,6 @@
 # python-georss-tfs-incidents-client
 Library for convenient access to the Tasmania Fire Service Incidents GeoRSS feed.
 
-
-# python-georss-qfes-bushfire-alert-client
-
 [![Build Status](https://travis-ci.org/exxamalte/python-georss-tfs-incidents-client.svg)](https://travis-ci.org/exxamalte/python-georss-tfs-incidents-client)
 [![Coverage Status](https://coveralls.io/repos/github/exxamalte/python-georss-tfs-incidents-client/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-georss-tfs-incidents-client?branch=master)
 [![PyPi](https://img.shields.io/pypi/v/georss-tfs-incidents-client.svg)](https://pypi.python.org/pypi/georss-tfs-incidents-client)
