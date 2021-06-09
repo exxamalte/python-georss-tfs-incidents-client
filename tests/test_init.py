@@ -4,6 +4,7 @@ import unittest
 from unittest import mock
 
 from georss_client import UPDATE_OK
+
 from georss_tfs_incidents_client import TfsIncidentsFeed, TfsIncidentsFeedManager
 from tests import load_fixture
 

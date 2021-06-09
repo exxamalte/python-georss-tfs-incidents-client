@@ -3,7 +3,7 @@ Tasmania Fire Service Incidents Feed.
 
 Fetches GeoRSS feed from Tasmania Fire Service Incidents Feed.
 """
-from georss_client import GeoRssFeed, FeedEntry
+from georss_client import FeedEntry, GeoRssFeed
 from georss_client.consts import CUSTOM_ATTRIBUTE
 from georss_client.feed_manager import FeedManagerBase
 
