@@ -9,45 +9,45 @@ from georss_client.feed_manager import FeedManagerBase
 
 ATTRIBUTION = "Tasmania Fire Service"
 
-REGEXP_ATTR_LOCATION = 'LOCATION: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
-REGEXP_ATTR_REGION = 'Region: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
-REGEXP_ATTR_RESPONSIBLE_AGENCY = 'RESPONSIBLE AGENCY: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
-REGEXP_ATTR_SIZE = 'SIZE: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
-REGEXP_ATTR_STATUS = 'STATUS: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
-REGEXP_ATTR_TYPE = 'TYPE: (?P<{}>[^<]+)<br />'\
-    .format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_LOCATION = "LOCATION: (?P<{}>[^<]+)<br />".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_REGION = "Region: (?P<{}>[^<]+)<br />".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_RESPONSIBLE_AGENCY = "RESPONSIBLE AGENCY: (?P<{}>[^<]+)<br />".format(
+    CUSTOM_ATTRIBUTE
+)
+REGEXP_ATTR_SIZE = "SIZE: (?P<{}>[^<]+)<br />".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_STATUS = "STATUS: (?P<{}>[^<]+)<br />".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_TYPE = "TYPE: (?P<{}>[^<]+)<br />".format(CUSTOM_ATTRIBUTE)
 
 URL = "http://www.fire.tas.gov.au/Show?pageId=colBushfireSummariesRss"
 
-VALID_CATEGORIES = ['Emergency Warning', 'Watch and Act', 'Advice',
-                    'No Alert Level']
+VALID_CATEGORIES = ["Emergency Warning", "Watch and Act", "Advice", "No Alert Level"]
 
 
 class TfsIncidentsFeedManager(FeedManagerBase):
     """Feed Manager for Tasmania Fire Service Incidents feed."""
 
-    def __init__(self, generate_callback, update_callback, remove_callback,
-                 coordinates, filter_radius=None,
-                 filter_categories=None):
+    def __init__(
+        self,
+        generate_callback,
+        update_callback,
+        remove_callback,
+        coordinates,
+        filter_radius=None,
+        filter_categories=None,
+    ):
         """Initialize the Tasmania Fire Service Incidents Feed Manager."""
         feed = TfsIncidentsFeed(
             coordinates,
             filter_radius=filter_radius,
-            filter_categories=filter_categories)
-        super().__init__(feed, generate_callback, update_callback,
-                         remove_callback)
+            filter_categories=filter_categories,
+        )
+        super().__init__(feed, generate_callback, update_callback, remove_callback)
 
 
 class TfsIncidentsFeed(GeoRssFeed):
     """Tasmania Fire Service Incidents feed."""
 
-    def __init__(self, home_coordinates, filter_radius=None,
-                 filter_categories=None):
+    def __init__(self, home_coordinates, filter_radius=None, filter_categories=None):
         """Initialise this service."""
         super().__init__(home_coordinates, URL, filter_radius=filter_radius)
         self._filter_categories = filter_categories
@@ -60,9 +60,9 @@ class TfsIncidentsFeed(GeoRssFeed):
         """Filter the provided entries."""
         entries = super()._filter_entries(entries)
         if self._filter_categories:
-            return list(filter(lambda entry:
-                               entry.category in self._filter_categories,
-                               entries))
+            return list(
+                filter(lambda entry: entry.category in self._filter_categories, entries)
+            )
         return entries
 
 
