@@ -1,3 +1,5 @@
+import os
+
 from setuptools import find_packages, setup
 
 NAME = "georss_tfs_incidents_client"
@@ -6,12 +8,17 @@ AUTHOR_EMAIL = "coding@subspace.de"
 DESCRIPTION = "A GeoRSS client library for the Tasmania Fire Service Incidents feed."
 URL = "https://github.com/exxamalte/python-georss-tfs-incidents-client"
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
 REQUIRES = [
     "georss_client>=0.15",
 ]
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+VERSION = {}
+with open(os.path.join(HERE, NAME, "__version__.py")) as f:
+    exec(f.read(), VERSION)  # pylint: disable=exec-used
 
 setup(
     name=NAME,
