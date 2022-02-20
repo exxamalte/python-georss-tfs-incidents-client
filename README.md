@@ -1,7 +1,7 @@
 # python-georss-tfs-incidents-client
 
-[![Build Status](https://travis-ci.org/exxamalte/python-georss-tfs-incidents-client.svg)](https://travis-ci.org/exxamalte/python-georss-tfs-incidents-client)
-[![Coverage Status](https://coveralls.io/repos/github/exxamalte/python-georss-tfs-incidents-client/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-georss-tfs-incidents-client?branch=master)
+[![Build Status](https://github.com/exxamalte/python-georss-tfs-incidents-client/workflows/CI/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-tfs-incidents-client/actions?workflow=CI)
+[![codecov](https://codecov.io/gh/exxamalte/python-georss-tfs-incidents-client/branch/master/graph/badge.svg?token=IXV90IIWA3)](https://codecov.io/gh/exxamalte/python-georss-tfs-incidents-client)
 [![PyPi](https://img.shields.io/pypi/v/georss-tfs-incidents-client.svg)](https://pypi.python.org/pypi/georss-tfs-incidents-client)
 [![Version](https://img.shields.io/pypi/pyversions/georss-tfs-incidents-client.svg)](https://pypi.python.org/pypi/georss-tfs-incidents-client)
 
