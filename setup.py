@@ -22,7 +22,7 @@ with open(os.path.join(HERE, NAME, "__version__.py")) as f:
 
 setup(
     name=NAME,
-    version="0.3",
+    version=VERSION["__version__"],
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     description=DESCRIPTION,
