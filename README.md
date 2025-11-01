@@ -1,3 +1,5 @@
+# :warning: This project has been archived because the feed that this library is based on is no longer provided by TAS ALERT. :warning:
+
 # python-georss-tfs-incidents-client
 
 [![Build Status](https://github.com/exxamalte/python-georss-tfs-incidents-client/workflows/CI/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-tfs-incidents-client/actions?workflow=CI)
